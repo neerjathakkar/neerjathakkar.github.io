@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computational Immunology | Neerja Thakkar</title>
+    <link>https://neerjathakkar.github.io/category/computational-immunology/</link>
+      <atom:link href="https://neerjathakkar.github.io/category/computational-immunology/index.xml" rel="self" type="application/rss+xml" />
+    <description>Computational Immunology</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 20 May 2020 23:12:58 -0500</lastBuildDate>
+    <image>
+      <url>https://neerjathakkar.github.io/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
+      <title>Computational Immunology</title>
+      <link>https://neerjathakkar.github.io/category/computational-immunology/</link>
+    </image>
+    
+    <item>
+      <title>Balancing sensitivity and specificity in distinguishing TCR groups by CDR sequence similarity</title>
+      <link>https://neerjathakkar.github.io/publication/balancing-sensitivity-specificity/</link>
+      <pubDate>Wed, 20 May 2020 23:12:58 -0500</pubDate>
+      <guid>https://neerjathakkar.github.io/publication/balancing-sensitivity-specificity/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

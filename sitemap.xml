@@ -3,22 +3,72 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://neerjathakkar.github.io/tag/2019/</loc>
+    <lastmod>2020-05-22T23:29:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/tag/fulbright/</loc>
+    <lastmod>2020-05-22T23:29:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/post/neerja-espana-3/</loc>
+    <lastmod>2020-05-22T23:29:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/places/</loc>
+    <lastmod>2020-05-22T23:29:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/post/</loc>
+    <lastmod>2020-05-22T23:29:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/places/spain/</loc>
+    <lastmod>2020-05-22T23:29:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/tags/</loc>
+    <lastmod>2020-05-22T23:29:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/places/zaragoza/</loc>
+    <lastmod>2020-05-22T23:29:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/places/madrid/</loc>
+    <lastmod>2020-05-21T23:29:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/post/neerja-espana-2/</loc>
+    <lastmod>2020-05-21T23:29:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/post/fulbright-app-1/</loc>
+    <lastmod>2020-05-20T23:29:37-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/post/neerja-espana-1/</loc>
+    <lastmod>2020-05-20T23:29:37-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://neerjathakkar.github.io/publication-type/2/</loc>
     <lastmod>2020-05-20T23:12:58-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://neerjathakkar.github.io/publication/balancing-sensitivity-specificity/</loc>
-    <lastmod>2020-05-20T23:12:58-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://neerjathakkar.github.io/categories/</loc>
-    <lastmod>2020-05-20T23:12:58-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://neerjathakkar.github.io/category/computational-immunology/</loc>
     <lastmod>2020-05-20T23:12:58-05:00</lastmod>
   </url>
   
@@ -33,8 +83,18 @@
   </url>
   
   <url>
-    <loc>https://neerjathakkar.github.io/blog/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    <loc>https://neerjathakkar.github.io/tag/2020/</loc>
+    <lastmod>2020-05-19T23:29:37-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/post/intro/</loc>
+    <lastmod>2020-05-19T23:29:37-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/places/minnesota/</loc>
+    <lastmod>2020-05-19T23:29:37-05:00</lastmod>
   </url>
   
   <url>
@@ -43,7 +103,16 @@
   </url>
   
   <url>
+    <loc>https://neerjathakkar.github.io/blog/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://neerjathakkar.github.io/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/categories/</loc>
   </url>
   
   <url>
@@ -51,15 +120,7 @@
   </url>
   
   <url>
-    <loc>https://neerjathakkar.github.io/post/</loc>
-  </url>
-  
-  <url>
     <loc>https://neerjathakkar.github.io/talk/</loc>
-  </url>
-  
-  <url>
-    <loc>https://neerjathakkar.github.io/tags/</loc>
   </url>
   
 </urlset>

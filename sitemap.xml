@@ -128,16 +128,6 @@
   </url>
   
   <url>
-    <loc>https://neerjathakkar.github.io/category/blog/</loc>
-    <lastmod>2020-05-20T23:29:37-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://neerjathakkar.github.io/categories/</loc>
-    <lastmod>2020-05-20T23:29:37-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://neerjathakkar.github.io/post/neerja-espana-1/</loc>
     <lastmod>2020-05-20T23:29:37-05:00</lastmod>
   </url>
@@ -174,6 +164,10 @@
   
   <url>
     <loc>https://neerjathakkar.github.io/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://neerjathakkar.github.io/categories/</loc>
   </url>
   
   <url>

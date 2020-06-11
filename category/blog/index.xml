@@ -1,0 +1,70 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Neerja Thakkar</title>
+    <link>https://neerjathakkar.github.io/category/blog/</link>
+    <description>Recent content in blog on Neerja Thakkar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 May 2020 23:29:37 -0500</lastBuildDate>
+    
+        <atom:link href="https://neerjathakkar.github.io/category/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Applying for the Fulbright Part 1</title>
+      <link>https://neerjathakkar.github.io/post/fulbright-app-1/</link>
+      <pubDate>Wed, 20 May 2020 23:29:37 -0500</pubDate>
+      
+      <guid>https://neerjathakkar.github.io/post/fulbright-app-1/</guid>
+      <description>&lt;p&gt;When you look at the 
+&lt;a href=&#34;https://us.fulbrightonline.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fulbright website&lt;/a&gt;, you may notice that the amount of different programs you can apply to is huge. There are several axes of freedom where you have to make a decision: the &lt;strong&gt;country&lt;/strong&gt; you apply in, the &lt;strong&gt;program&lt;/strong&gt; you apply for (research/TA/masters), and if you do research, the &lt;strong&gt;host institution&lt;/strong&gt; you work with and the &lt;strong&gt;research project&lt;/strong&gt; you propose. It can feel overwhelming to decide which program to apply for and how to go about the process, so in this post I&amp;rsquo;m going to go over some things I considered and explain how I ended up making a decision. Most of this post will only be applicable for a research Fulbright as part of the US Student program, since that is what I applied for.&lt;/p&gt;
+&lt;p&gt;There are a lot of things to consider as you narrow down what you want to do. Here are some things that I kept in mind:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The acceptance rate varies a lot by country and program. I was able to get some numbers from my school&amp;rsquo;s fellowship office (many universities will help you through this process - definitely use those resources if they are available to you!), and I realized that some countries had an extremely low acceptance rate for research/masters Fulbright&amp;rsquo;s (~2%), whereas others had a much higher acceptance rate (closer to a third of applicants were accepted)&lt;/li&gt;
+&lt;li&gt;Read the 
+&lt;a href=&#34;https://us.fulbrightonline.org/countries&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page specific to a country&lt;/a&gt; you are considering very carefully. There are many variations by country and by programs within a country, such as:
+&lt;ul&gt;
+&lt;li&gt;Some countries have specific requirements (for example, you may need a masters to do research at a particular institution within a country)&lt;/li&gt;
+&lt;li&gt;Some countries have a preference to fund certain kinds of academic fields, so you could be at an advantage or disadvantage&lt;/li&gt;
+&lt;li&gt;Some countries have a language requirement or recommendation. Even if it&amp;rsquo;s a recommendation, it would be wise to only apply to that country if you have that competency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Host institution selection
+&lt;ul&gt;
+&lt;li&gt;What city is it in? Do you want to live in that city?&lt;/li&gt;
+&lt;li&gt;Who within the host institution would you be working with?&lt;/li&gt;
+&lt;li&gt;Can your host institution meet with you as often as you will need and give you the resources and support that you need?&lt;/li&gt;
+&lt;li&gt;Would you be happy in this environment for 9 months?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Research project proposal
+&lt;ul&gt;
+&lt;li&gt;Even if your project is purely STEM, it needs to have some connection to where you are, since Fulbright is funding you for a project in a specific place&lt;/li&gt;
+&lt;li&gt;Needs to be supported by host institution&lt;/li&gt;
+&lt;li&gt;Does it meet your personal goals for skills you want to gain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With those considerations in mind, there are different approaches you could take. If you have a research project in mind that you want to undertake, you could think of a country/host institution where it would make sense to propose your research project to. Or, you could take the approach I did:&lt;/p&gt;
+&lt;p&gt;I knew I wanted to do a research Fulbright in the field of computer science (more narrowly, within computer vision/graphics and computational photography). I also wanted to spend a year somewhere in Europe. Narrowing down countries by their acceptance rates, so that I wasn&amp;rsquo;t applying anywhere that generally took less than 10% of applicants, and also by looking for those where language wouldn&amp;rsquo;t be a significant barrier, I decided to look for potential research labs in Spain and Switzerland.&lt;/p&gt;
+&lt;p&gt;I found professors in those countries by reading previous work that interested me, and asked my research advisor at Dartmouth if he could send an email introducing me to these professors - he knew many of the ones I wanted to work with, and even for the ones he didn&amp;rsquo;t know, a cold email from another respected professor in the field often has a much higher chance of being read than one from a random student. We contacted one professor at a time, and I soon hit it off with the lab in Spain that I ended up working at. Together, we brainstormed a project that I could talk about in my Fulbright application, and soon I was drafting my proposal - more on that in my next post.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello!</title>
+      <link>https://neerjathakkar.github.io/post/intro/</link>
+      <pubDate>Tue, 19 May 2020 23:29:37 -0500</pubDate>
+      
+      <guid>https://neerjathakkar.github.io/post/intro/</guid>
+      <description>&lt;p&gt;Thanks for making your way to my blog! I am excited to see where this new adventure takes me.&lt;/p&gt;
+&lt;p&gt;By way of introducing myself: I grew up in St. Paul, Minnesota with my parents and my little sister, Nitya. In middle school and high school, most of my time outside of school was spent practicing the violin, doing bharatanatyam (a form of Indian dance), and being a part of the math team. In 2015, I moved to Hanover, New Hampshire, to start at Dartmouth College. There, I discovered computer science and fell in love with both a new way of thinking and the potential to make an important impact. I continued violin in my college orchestra and had a lot of fun spending time in the outdoors, getting into hiking and climbing. I also became very involved with sexual violence prevention, eventually serving as a chair on the Student and Presidential Committee on Sexual Assault. I graduated with a double major in Computer Science and Mathematics, experiences both in academia and industry, and admission to the EECS PhD program at UC Berkeley.&lt;/p&gt;
+&lt;p&gt;I was excited to start my PhD, but decided to defer for a year. After graduation, I moved to Zaragoza, Spain for a Fulbright research scholarship. I spent the most incredible 6 months in Spain before I had to leave early and return home due to the pandemic. I&amp;rsquo;ve been staying busy at home finishing up my Fulbright research remotely, and I&amp;rsquo;m trying to make the most of this time. I&amp;rsquo;ve been enjoying photography, running, reading, cooking, and now starting this blog.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been good about keeping a consistent journal for years, but when I was in Spain, I started writing more for other people. I sent semi-regular email updates to several friends and family about my adventures in Spain, and really enjoyed sharing what I was up to. I&amp;rsquo;ve also been asked by several people about the process of applying to Fulbright/grad school/scholarships, and I want to post information about that that is hopefully helpful to others, especially other women considering computer science. I have been incredibly fortunate to have so many wonderful mentors and access to resources at an elite institution, and I would love to share what I&amp;rsquo;ve learned with those who may not have as easy access to this information.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll be posting lightly edited versions of the emails I sent to my friends (but I won&amp;rsquo;t omit things I have since changed my mind about - it&amp;rsquo;s been fun to reread them and see how things evolved) covering most of my Fulbright experience in Spain, several posts about research/grad school/applying to Fulbright, and other things that come across my mind. If there is anything you would like to hear about, don&amp;rsquo;t hesitate to 
+&lt;a href=&#34;http://neerja.me/#contact&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reach out&lt;/a&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2020 | Neerja Thakkar</title>
-    <link>https://neerjathakkar.github.io/tag/2020/</link>
-      <atom:link href="https://neerjathakkar.github.io/tag/2020/index.xml" rel="self" type="application/rss+xml" />
+    <link>neerja.me/tag/2020/</link>
+      <atom:link href="neerja.me/tag/2020/index.xml" rel="self" type="application/rss+xml" />
     <description>2020</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 19 May 2020 23:29:37 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>This work by Neerja Thakkar is licensed under a Creative Commons Attribution 4.0 International License.</copyright><lastBuildDate>Tue, 19 May 2020 23:29:37 -0500</lastBuildDate>
     <image>
-      <url>https://neerjathakkar.github.io/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
+      <url>/neerja.me/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
       <title>2020</title>
-      <link>https://neerjathakkar.github.io/tag/2020/</link>
+      <link>neerja.me/tag/2020/</link>
     </image>
     
     <item>
       <title>Hello!</title>
-      <link>https://neerjathakkar.github.io/post/intro/</link>
+      <link>neerja.me/post/intro/</link>
       <pubDate>Tue, 19 May 2020 23:29:37 -0500</pubDate>
-      <guid>https://neerjathakkar.github.io/post/intro/</guid>
+      <guid>neerja.me/post/intro/</guid>
       <description>&lt;p&gt;Thanks for making your way to my blog! I am excited to see where this new adventure takes me.&lt;/p&gt;
 &lt;p&gt;By way of introducing myself: I grew up in St. Paul, Minnesota with my parents and my little sister, Nitya. In middle school and high school, most of my time outside of school was spent practicing the violin, doing bharatanatyam (a form of Indian dance), and being a part of the math team. In 2015, I moved to Hanover, New Hampshire, to start at Dartmouth College. There, I discovered computer science and fell in love with both a new way of thinking and the potential to make an important impact. I continued violin in my college orchestra and had a lot of fun spending time in the outdoors, getting into hiking and climbing. I also became very involved with sexual violence prevention, eventually serving as a chair on the Student and Presidential Committee on Sexual Assault. I graduated with a double major in Computer Science and Mathematics, experiences both in academia and industry, and admission to the EECS PhD program at UC Berkeley.&lt;/p&gt;
 &lt;p&gt;I was excited to start my PhD, but decided to defer for a year. After graduation, I moved to Zaragoza, Spain for a Fulbright research scholarship. I spent the most incredible 6 months in Spain before I had to leave early and return home due to the pandemic. I&amp;rsquo;ve been staying busy at home finishing up my Fulbright research remotely, and I&amp;rsquo;m trying to make the most of this time. I&amp;rsquo;ve been enjoying photography, running, reading, cooking, and now starting this blog.&lt;/p&gt;

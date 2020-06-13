@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Neerja Thakkar</title>
-    <link>https://neerjathakkar.github.io/tags/</link>
-      <atom:link href="https://neerjathakkar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>neerja.me/tags/</link>
+      <atom:link href="neerja.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 06 Jun 2020 21:26:08 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>This work by Neerja Thakkar is licensed under a Creative Commons Attribution 4.0 International License.</copyright><lastBuildDate>Sat, 06 Jun 2020 21:26:08 -0500</lastBuildDate>
     <image>
-      <url>https://neerjathakkar.github.io/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
+      <url>/neerja.me/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
       <title>Tags</title>
-      <link>https://neerjathakkar.github.io/tags/</link>
+      <link>neerja.me/tags/</link>
     </image>
     
   </channel>

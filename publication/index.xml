@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Research | Neerja Thakkar</title>
-    <link>https://neerjathakkar.github.io/publication/</link>
-      <atom:link href="https://neerjathakkar.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <link>neerja.me/publication/</link>
+      <atom:link href="neerja.me/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Research</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 24 May 2020 13:28:44 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>This work by Neerja Thakkar is licensed under a Creative Commons Attribution 4.0 International License.</copyright><lastBuildDate>Sun, 24 May 2020 13:28:44 -0500</lastBuildDate>
     <image>
-      <url>https://neerjathakkar.github.io/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
+      <url>/neerja.me/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
       <title>Research</title>
-      <link>https://neerjathakkar.github.io/publication/</link>
+      <link>neerja.me/publication/</link>
     </image>
     
     <item>
       <title>Deep Compressed Sensing for HDR Image Acquisition</title>
-      <link>https://neerjathakkar.github.io/publication/iccp_2020_poster/</link>
+      <link>neerja.me/publication/iccp_2020_poster/</link>
       <pubDate>Sun, 24 May 2020 13:28:44 -0500</pubDate>
-      <guid>https://neerjathakkar.github.io/publication/iccp_2020_poster/</guid>
+      <guid>neerja.me/publication/iccp_2020_poster/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Balancing sensitivity and specificity in distinguishing TCR groups by CDR sequence similarity</title>
-      <link>https://neerjathakkar.github.io/publication/balancing-sensitivity-specificity/</link>
+      <link>neerja.me/publication/balancing-sensitivity-specificity/</link>
       <pubDate>Wed, 20 May 2020 23:12:58 -0500</pubDate>
-      <guid>https://neerjathakkar.github.io/publication/balancing-sensitivity-specificity/</guid>
+      <guid>neerja.me/publication/balancing-sensitivity-specificity/</guid>
       <description></description>
     </item>
     

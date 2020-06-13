@@ -2,8 +2,8 @@
   "name": "Neerja Thakkar",
   "short_name": "Neerja Thakkar",
   "lang": "en-us",
-  "theme_color": "hsl(339, 90%, 68%)",
-  "background_color": "hsl(339, 90%, 68%)",
+  "theme_color": "#cc00a3",
+  "background_color": "#cc00a3",
   "icons": [{
     "src": "/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_192x192_fill_lanczos_center_2.png",
     "sizes": "192x192",

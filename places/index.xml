@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Places | Neerja Thakkar</title>
-    <link>neerja.me/places/</link>
-      <atom:link href="neerja.me/places/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://neerja.me/places/</link>
+      <atom:link href="https://neerja.me/places/index.xml" rel="self" type="application/rss+xml" />
     <description>Places</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>This work by Neerja Thakkar is licensed under a Creative Commons Attribution 4.0 International License.</copyright><lastBuildDate>Wed, 03 Jun 2020 10:39:49 -0500</lastBuildDate>
     <image>
-      <url>/neerja.me/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
+      <url>https://neerja.me/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
       <title>Places</title>
-      <link>neerja.me/places/</link>
+      <link>https://neerja.me/places/</link>
     </image>
     
   </channel>

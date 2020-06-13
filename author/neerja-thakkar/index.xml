@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Neerja Thakkar</title>
-    <link>neerja.me/author/neerja-thakkar/</link>
-      <atom:link href="neerja.me/author/neerja-thakkar/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://neerja.me/author/neerja-thakkar/</link>
+      <atom:link href="https://neerja.me/author/neerja-thakkar/index.xml" rel="self" type="application/rss+xml" />
     <description>Neerja Thakkar</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>This work by Neerja Thakkar is licensed under a Creative Commons Attribution 4.0 International License.</copyright>
     <image>
-      <url>/neerja.me/author/neerja-thakkar/avatar_huf30df5f0e4b0e562d2dd693ae9b0eca3_4148542_270x270_fill_q90_lanczos_center.jpg</url>
+      <url>https://neerja.me/author/neerja-thakkar/avatar_huf30df5f0e4b0e562d2dd693ae9b0eca3_4148542_270x270_fill_q90_lanczos_center.jpg</url>
       <title>Neerja Thakkar</title>
-      <link>neerja.me/author/neerja-thakkar/</link>
+      <link>https://neerja.me/author/neerja-thakkar/</link>
     </image>
     
   </channel>

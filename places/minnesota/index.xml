@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Minnesota | Neerja Thakkar</title>
-    <link>neerja.me/places/minnesota/</link>
-      <atom:link href="neerja.me/places/minnesota/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://neerja.me/places/minnesota/</link>
+      <atom:link href="https://neerja.me/places/minnesota/index.xml" rel="self" type="application/rss+xml" />
     <description>Minnesota</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>This work by Neerja Thakkar is licensed under a Creative Commons Attribution 4.0 International License.</copyright><lastBuildDate>Wed, 03 Jun 2020 10:39:49 -0500</lastBuildDate>
     <image>
-      <url>/neerja.me/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
+      <url>https://neerja.me/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
       <title>Minnesota</title>
-      <link>neerja.me/places/minnesota/</link>
+      <link>https://neerja.me/places/minnesota/</link>
     </image>
     
     <item>
       <title>Tips for Working From Home</title>
-      <link>neerja.me/post/work-from-home/</link>
+      <link>https://neerja.me/post/work-from-home/</link>
       <pubDate>Wed, 03 Jun 2020 10:39:49 -0500</pubDate>
-      <guid>neerja.me/post/work-from-home/</guid>
+      <guid>https://neerja.me/post/work-from-home/</guid>
       <description>&lt;p&gt;Due to the pandemic, a lot of us who are fortunate to have jobs where we can work from home have been dealing with a new normal. This was an adjustment for me, but after I got used to it, I actually love working from home. Of course, there&amp;rsquo;s a lot going on, so it&amp;rsquo;s really important to prioritize taking care of yourself and being okay with not always being at your most productive right now. There are some days where it&amp;rsquo;s really hard for me to focus, but more and more where I&amp;rsquo;m getting a lot done. Here are some things that have really worked for me when working from home:&lt;/p&gt;
 &lt;p&gt;First, a few things to think about in advance.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Invest in your work space.&lt;/strong&gt; (Or, get your company to.) Buying a monitor made it much easier to stare at my computer for hours. I also bought an ergonomic keyboard, and I have a kneeling desk chair. My back feels so much better compared to when I was a student and lugging around textbooks/studying in a not ideal posture.&lt;/p&gt;
@@ -34,9 +34,9 @@
     
     <item>
       <title>Hello!</title>
-      <link>neerja.me/post/intro/</link>
+      <link>https://neerja.me/post/intro/</link>
       <pubDate>Tue, 19 May 2020 23:29:37 -0500</pubDate>
-      <guid>neerja.me/post/intro/</guid>
+      <guid>https://neerja.me/post/intro/</guid>
       <description>&lt;p&gt;Thanks for making your way to my blog! I am excited to see where this new adventure takes me.&lt;/p&gt;
 &lt;p&gt;By way of introducing myself: I grew up in St. Paul, Minnesota with my parents and my little sister, Nitya. In middle school and high school, most of my time outside of school was spent practicing the violin, doing bharatanatyam (a form of Indian dance), and being a part of the math team. In 2015, I moved to Hanover, New Hampshire, to start at Dartmouth College. There, I discovered computer science and fell in love with both a new way of thinking and the potential to make an important impact. I continued violin in my college orchestra and had a lot of fun spending time in the outdoors, getting into hiking and climbing. I also became very involved with sexual violence prevention, eventually serving as a chair on the Student and Presidential Committee on Sexual Assault. I graduated with a double major in Computer Science and Mathematics, experiences both in academia and industry, and admission to the EECS PhD program at UC Berkeley.&lt;/p&gt;
 &lt;p&gt;I was excited to start my PhD, but decided to defer for a year. After graduation, I moved to Zaragoza, Spain for a Fulbright research scholarship. I spent the most incredible 6 months in Spain before I had to leave early and return home due to the pandemic. I&amp;rsquo;ve been staying busy at home finishing up my Fulbright research remotely, and I&amp;rsquo;m trying to make the most of this time. I&amp;rsquo;ve been enjoying photography, running, reading, cooking, and now starting this blog.&lt;/p&gt;

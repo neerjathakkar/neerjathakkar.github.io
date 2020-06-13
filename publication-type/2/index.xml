@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 | Neerja Thakkar</title>
-    <link>neerja.me/publication-type/2/</link>
-      <atom:link href="neerja.me/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://neerja.me/publication-type/2/</link>
+      <atom:link href="https://neerja.me/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>This work by Neerja Thakkar is licensed under a Creative Commons Attribution 4.0 International License.</copyright><lastBuildDate>Wed, 20 May 2020 23:12:58 -0500</lastBuildDate>
     <image>
-      <url>/neerja.me/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
+      <url>https://neerja.me/images/icon_hu86b94514bc44f7650ad97bf1bd4dbea1_2402_512x512_fill_lanczos_center_2.png</url>
       <title>2</title>
-      <link>neerja.me/publication-type/2/</link>
+      <link>https://neerja.me/publication-type/2/</link>
     </image>
     
     <item>
       <title>Balancing sensitivity and specificity in distinguishing TCR groups by CDR sequence similarity</title>
-      <link>neerja.me/publication/balancing-sensitivity-specificity/</link>
+      <link>https://neerja.me/publication/balancing-sensitivity-specificity/</link>
       <pubDate>Wed, 20 May 2020 23:12:58 -0500</pubDate>
-      <guid>neerja.me/publication/balancing-sensitivity-specificity/</guid>
+      <guid>https://neerja.me/publication/balancing-sensitivity-specificity/</guid>
       <description></description>
     </item>
     

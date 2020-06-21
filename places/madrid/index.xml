@@ -75,7 +75,7 @@
 &lt;figure id=&#34;figure-and-heres-one-of-my-favorite-plazas-in-madrid&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://neerja.me/img/madrid_lights.jpg&#34; data-caption=&#34;And here&amp;rsquo;s one of my favorite plaza&amp;rsquo;s in Madrid&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://neerja.me/img/madrid_lights.jpg&#34; data-caption=&#34;And here&amp;rsquo;s one of my favorite plazas in Madrid&#34;&gt;
 
 
   &lt;img src=&#34;https://neerja.me/img/madrid_lights.jpg&#34; alt=&#34;&#34; width=&#34;500&#34; &gt;
@@ -85,7 +85,7 @@
   
   
   &lt;figcaption&gt;
-    And here&amp;rsquo;s one of my favorite plaza&amp;rsquo;s in Madrid
+    And here&amp;rsquo;s one of my favorite plazas in Madrid
   &lt;/figcaption&gt;
 
 

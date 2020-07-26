@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://neerja.me/</loc>
+    <lastmod>2020-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neerja.me/start/</loc>
+    <lastmod>2020-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://neerja.me/post/rec_letters/</loc>
     <lastmod>2020-07-25T11:02:56-05:00</lastmod>
   </url>
@@ -215,11 +225,6 @@
   <url>
     <loc>https://neerja.me/post/intro/</loc>
     <lastmod>2020-05-19T23:29:37-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://neerja.me/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

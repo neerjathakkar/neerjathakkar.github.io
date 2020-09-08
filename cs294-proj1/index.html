@@ -1,0 +1,128 @@
+                <meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+
+**CS294-26 Project 1 - Colorizing the Prokudin-Gorskii Photo Collection** 
+
+By Neerja Thakkar
+
+Base Assignment
+===============================================================================
+
+Project Overview
+----------------- 
+Prokudin-Gorskii captured color photographs before color photography existed. He recorded three exposures of a scene, filtered with 
+red, green and blue. The goal of this project is to take these three exposures and automatically process them to create a beautiful
+color images of the Russian Empire in the early 1900s.
+
+My Approach
+-------------------------------------------------------------------------------
+
+For the single-scale approach, I searched over a window of offsets from [-15, 15] in the x and y direction. I selected the offsets 
+that resulted in the highest normalized cross-correlation between the red/blue channel and the green channel. I only calculated the 
+correlation on the middle 80% of each image, cropping 10% from each edge, so that the borders wouldn't interfere with the estimate.
+
+For a multi-scale approach, I constructed an image pyramid with a maximum of 8 levels, starting with the full-resolution image, and then
+down-scaling by factors of 2 at each level. I started at the coarsest scale, using my single-scale approach on this scale, and then
+moved down the pyramid, passing the best estimate down. 
+
+Except for the emir, this approach worked pretty well on all of the images, and was very fast. I hypothesize that the emir did not work
+well because the different color channels had very different brightnesses, and therefore the NCC on just the luminance values within each 
+channel was insufficient.
+
+Single-Scale Results
+-------------------------------------------------------------------------------
+![cathedral](out/single-scale_cathedral.jpg width=200) ![monastery](out/single-scale_monastery.jpg width=200) ![tobolsk](out/single-scale_tobolsk.jpg width=200)
+
+Multi-Scale Results
+-------------------
+![cathedral](out/multi-scale_cathedral.jpg width=200) ![monastery](out/multi-scale_monastery.jpg width=200) ![tobolsk](out/multi-scale_tobolsk.jpg width=200)
+![castle](out/multi-scale_castle.jpg width=200) ![emir](out/multi-scale_emir.jpg width=200) ![harvesters](out/multi-scale_harvesters.jpg width=200)
+![icon](out/multi-scale_icon.jpg width=200) ![lady](out/multi-scale_lady.jpg width=200) ![melons](out/multi-scale_melons.jpg width=200)
+![onion_church](out/multi-scale_onion_church.jpg width=200) ![self_portrait](out/multi-scale_self_portrait.jpg width=200) ![three_generations](out/multi-scale_three_generations.jpg width=200)
+![train](out/multi-scale_train.jpg width=200) ![workshop](out/multi-scale_workshop.jpg width=200) 
+
+Computed offsets
+-------------------------------------------------------------------------------
+| Image | G offset | R offset |
+|-------|----------|----------|
+| monastery     |(-3,2)          |(3,2)          |
+| cathedral     |(5,2)          |(12,3)          |
+| castle     |(35,3)          |(98,4)          |
+| harvesters     |(60,17)          |(124,13)          |
+| onion_church     |(51,27)          |(108,36)          |
+| self_portrait     |(79,29)          |(176,37)          |
+| three_generations     |(53,14)          |(112,11)          |
+| tobolsk     |(3,3)          |(6,3)          |
+| train     |(43,6)          |(87,32)          |
+| workshop     |(53,0)          |(105,-12)          |
+| lady     |(55,8)          |(117, 11)          |
+| emir     |(49,24)          |(416, -1555)          |
+| melons     |(82,11)          |(178,13)          |
+| icon     |(41,17)          |(89,23)          |
+
+Images of my choosing
+--------------------- 
+
+![offset (19,18)/(92,30)](out/multi-scale_gates.jpg width=200) ![offset (24,21)/(60,29)](out/multi-scale_monument.jpg width=200) 
+![offset (-12,1)/(22,0)](out/multi-scale_lane.jpg width=200) ![offset (11,24)/(48,42)](out/multi-scale_church.jpg width=200) 
+
+
+Bells and Whistles
+===================
+
+Automatic White Balance
+------------------------ 
+I implemented two simple automatic white balancing algorithms, using the White world and Gray world assumptions that were discussed in class.
+
+It's interesting to see how much these two assumptions can impact an image - here's the same image balanced with the white world assumption,
+which looks pretty good since the highlights in the clouds in the sky are a pure white, and the grey world assumption, which looks not as 
+great because the blue sky/ocean become grey.
+
+![Original tobolsk](out/multi-scale_tobolsk.jpg width=200) ![White world tobolsk](out/white_tobolsk.jpg width=200) ![Gray world tobolsk](out/grey_tobolsk.jpg width=200) 
+
+The grey world assumption worked better in the workshop image, where the average color was closer to gray.
+![Original workshop](out/multi-scale_workshop.jpg width=200) ![Gray world workshop](out/grey_workshop.jpg width=200) 
+
+
+
+Contrast
+----------------------------------------------------------------
+I first implemented a contrasting method where the user can pick a contrast value. I centered the image values around 0, 
+mutliplied by a scale factor, and re-centered back to 0.5.
+This led to some fun results, akin to playing with a 
+contrast slider on Lightroom, that allow a user to have creative control over how their image looks.
+
+![melons, low contrast](out/low_contrast_melons.jpg width=200)![melons, high contrast](out/high_contrast_melons.jpg width=200) 
+
+I then implemented histogram equalization. The idea of histogram equalization is that an image that is improperly exposed
+will have an uneven histogram of values, while "ideal" contrast (though of course this is subjective) will have an even histogram. 
+We can equalize histograms by considering the CDF (the cumulative histogram) - if it is equalized, the CDF will be much closer
+to a straight line.
+
+This led to a fully automatic contrast that worked pretty well on some images.
+I did the equalization on each channel individually, so I wonder if it would have been better if I combined the channels in a different way. 
+
+![icon without equalization](out/multi-scale_icon.jpg width=200)![icon with equalization](out/equalized_icon.jpg width=200) 
+
+In this histogram of the red channel of the image, where blue is before equalization, and orange is after. You can see that the original histogram has 
+too many values on the right side of the image, while not enough on the left side. The left side corresponds to darker parts of the image,
+and the equalized version of the image has some darker parts. For example, I think that in the red curtains the contrast looks better in the 
+equalized image.
+
+![icon red channel histogram before/after equalization](out/icon_r_hist.png width=400)
+
+
+
+Better features for alignment
+------------------------------ 
+Since there are many differences in brightness across the color channels, using NCC to compare and align channels isn't the best metric. This 
+is especially the case for the emir image, where the alignment with NCC on RGB images was completely off.
+
+The actual edges of the objects in the image seemed much more promising, so I used a Canny edge detector (implemented in scikit-image) on 
+the image channels before aligning. This led to significantly better results, especially for the emir image!
+ ![emir aligned without edges](out/multi-scale_emir.jpg width=200)![emir aligned with edges](out/multi-scale_emir_w_edges.jpg width=200) ![edges](out/edges.jpg width=200)
+
+
+
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>

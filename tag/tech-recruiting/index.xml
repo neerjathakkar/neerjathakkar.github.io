@@ -37,7 +37,7 @@
 &lt;li&gt;Team matching interview: Google has these interviews after you pass the coding interviews (I made it to this stage but dropped out after one interview because I didn&amp;rsquo;t like the team and had offer deadlines with other companies), in order to make sure there&amp;rsquo;s a good fit between you and the team. Some other companies also have similar interviews. Definitely take these seriously, because they can determine whether or not a team is willing to have you join them, which translates into you getting the internship or not&lt;/li&gt;
 &lt;li&gt;Other interviews: I don&amp;rsquo;t know that much about other types of interviews such as design or PM (product management), but Cracking the Coding Interview has an amazing breakdown of other types of interviews, and the author has written a separate book on applying to PM jobs&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Preparing for the coding interview&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how I prepared for the coding question interviews (the bulk of the interview process):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;First, I decided on the topics I needed to master and reviewed the basics of those topics by implementing data structures/algorithms from scratch. These topics included (but are not limited to - it&amp;rsquo;s been a while) the following:
 &lt;ul&gt;

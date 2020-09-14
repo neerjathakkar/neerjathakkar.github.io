@@ -6,7 +6,7 @@
       <atom:link href="https://neerja.me/tag/tech-recruiting/index.xml" rel="self" type="application/rss+xml" />
     <description>Tech Recruiting</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>This work by Neerja Thakkar is licensed under a Creative Commons Attribution 4.0 International License.
-© Neerja Thakkar 2020</copyright><lastBuildDate>Sat, 05 Sep 2020 13:00:25 -0500</lastBuildDate>
+© Neerja Thakkar 2020</copyright><lastBuildDate>Sun, 13 Sep 2020 11:00:25 -0500</lastBuildDate>
     <image>
       <url>https://neerja.me/images/icon_hu709051646b5c016a474294f302c76519_2025058_512x512_fill_lanczos_center_2.png</url>
       <title>Tech Recruiting</title>
@@ -14,12 +14,40 @@
     </image>
     
     <item>
+      <title>Getting a SWE Internship, Part 3</title>
+      <link>https://neerja.me/post/tech_internships_3/</link>
+      <pubDate>Sun, 13 Sep 2020 11:00:25 -0500</pubDate>
+      <guid>https://neerja.me/post/tech_internships_3/</guid>
+      <description>&lt;p&gt;As I said in the earlier parts of this post, I started the fall of my junior year having never had an internship in the tech industry, and ended it with software engineering internship offers at Facebook, Palantir, and Microsoft, among other companies. Now, I want to elucidate the tech recruiting process.&lt;/p&gt;
+&lt;p&gt;My 
+&lt;a href=&#34;%28https://neerja.me/post/tech_internships_1/%29&#34;&gt;first post&lt;/a&gt; covered having a strong resume/job application, and my 
+&lt;a href=&#34;%28https://neerja.me/post/tech_internships_2/%29&#34;&gt;second post&lt;/a&gt; covered nailing the actual interview. This post will talk about how to pick an internship once you have an offer or two in hand!&lt;/p&gt;
+&lt;p&gt;Once you get a job offer (or a few), congrats! You now get to decide where to work, which can be hard, so this post is going to cover my thoughts on how to pick an internship. While a lot of my advice for picking a job might be applicable for full-time jobs too, this is specifically based on my experiences choosing an internship. I will also touch on negotiation, which is applicable to both.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Choosing a Job&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There are a lot of factors that I considered when picking the best internship for me:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Team selection: If you are assigned to a team with your offer, do you like the team? If you aren’t assigned a team yet, how does team selection work, and will you get a say in it?&lt;/li&gt;
+&lt;li&gt;Technology/project: Do you know what tech stack you will be working on and if it’s relevant to the skills you want to build? Will you have any choice on what project you work on?&lt;/li&gt;
+&lt;li&gt;Location: How do you feel about the location you will be living in? Internships are a great chance to explore a new place, so if there’s a place you think you might want to live in post-graduation, an internship is a great time to move there&lt;/li&gt;
+&lt;li&gt;Company culture: What is the culture of this company like? What will your work hours be like? How old are most of the employees, and what does the vibe of the office seem like?&lt;/li&gt;
+&lt;li&gt;Company values: Is this company in line with your personal values and morals? (That being said, don’t be too harsh on yourself at this stage - many people will not be working at their dream job during or right after college, and in the society we live in you do need a job and you need experience to work towards your dream job. I personally think it’s completely justified to work somewhere that your values aren’t completely aligned with, and then use that experience and what you learn from it to get closer towards your dreams.)&lt;/li&gt;
+&lt;li&gt;Compensation: How much are you getting paid, and what others perks/bonuses are there, such as free housing, a housing stipend, a transportation stipend, free Uber rides to/from work, free food, etc.? If you can afford it, or if the differences are pretty minimal, I would recommend weighting the other factors more strongly.&lt;/li&gt;
+&lt;li&gt;Full time conversion: If you want to work at the company full time, do many interns have the opportunity to? How are interns evaluated and how many get return offers? Will you have to re-interview?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Talk to a lot of people! Once you get an offer, the tables turn, and now the company is actively trying to get you to work there. They will be more than happy to connect you to engineers who can give you a better insight into the above considerations and answer any other questions you have. I had a lot of calls with employees at the top 3-4 companies I was considering interning at, which was very helpful.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Negotiation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;As I said, once you get an offer, the company has determined that you are definitely qualified, and now they want to do what they can to convince you to work there. The tech industry is in high demand for talent, and with an offer in your hand, they have decided that you are that in-demand talent. When I went through recruiting, I felt so grateful to have job offers that were paying me very well, that it felt ridiculous to think of asking for even more. However, after talking to other women in the tech industry, I believe that you absolutely should negotiate.&lt;/p&gt;
+&lt;p&gt;Women are much less likely than men to negotiate, and to negotiate aggressively, and this is part of the reason why the gender pay gap exists. Therefore, even if you don’t feel great about negotiating, I would strongly encourage you to consider it. Negotiating can feel really scary, but in reality, oftentimes the worst thing that can happen is that a recruiter says no (if you say “give me X or I’ll walk”, or negotiate extremely aggressively, then it’s possible that you will lose a job offer, however, if you just ask politely then you’ll probably be fine). For full-time, you can negotiate for almost anything - salary, of course, but also stocks, signing bonus, vacation days, location, work from home flexibility, and other things in your offer. Having another job offer that pays more/is in your ideal location/has some other benefit is a great way to negotiate. Negotiating for internships is harder, since internships often have very set budgets, but you can still try to negotiate, especially for things such as your internship location or team. There are a lot of great online resources about negotiation that I would strongly recommend you check out and try out!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Getting a SWE Internship, Part 2</title>
       <link>https://neerja.me/post/tech_internships_2/</link>
       <pubDate>Sat, 05 Sep 2020 13:00:25 -0500</pubDate>
       <guid>https://neerja.me/post/tech_internships_2/</guid>
       <description>&lt;p&gt;As I said in 
-&lt;a href=&#34;%28https://neerja.me/post/rec_letters/%29&#34;&gt;part 1&lt;/a&gt; of this post, I started the fall of my junior year having never had an internship in the tech industry, and ended it with software engineering internship offers at Facebook, Palantir, and Microsoft, among other companies. My first post covered having a strong resume/job application, and this one will cover nailing the actual interview.&lt;/p&gt;
+&lt;a href=&#34;%28https://neerja.me/post/tech_internships_1/%29&#34;&gt;part 1&lt;/a&gt; of this post, I started the fall of my junior year having never had an internship in the tech industry, and ended it with software engineering internship offers at Facebook, Palantir, and Microsoft, among other companies. My first post covered having a strong resume/job application, and this one will cover nailing the actual interview.&lt;/p&gt;
 &lt;p&gt;Before I dive into it, I want to link to a few helpful resources that I&amp;rsquo;ll refer to throughout this post:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -67,7 +95,7 @@
       <link>https://neerja.me/post/tech_internships_1/</link>
       <pubDate>Mon, 24 Aug 2020 13:00:25 -0500</pubDate>
       <guid>https://neerja.me/post/tech_internships_1/</guid>
-      <description>&lt;p&gt;As I approached my junior year, I had never had a software engineering internship in the tech industry before, and I really wanted to get an internship at a big or medium-sized tech company for the upcoming summer. I did some research on how to approach recruiting, and then I went for it. I ended up getting offers at Facebook, Microsoft, and Palantir, among other companies. In this 3-part series, I&amp;rsquo;ll walk you through the steps I took that led to that outcome.&lt;/p&gt;
+      <description>&lt;p&gt;As I approached my junior year, I had never had a software engineering internship in the tech industry before, and I really wanted to get an internship at a big or medium-sized tech company for the upcoming summer. I did some research on how to approach recruiting, and then I went for it. I ended up getting offers at Facebook, Microsoft, and Palantir, among other companies. The tech recruiting process can feel intimidating, but it&amp;rsquo;s actually pretty straightforward, and once you understand it you can definitely take the steps to get your first internship too! In this 3-part series, I&amp;rsquo;ll walk you through the steps I took that led to that outcome.&lt;/p&gt;
 &lt;p&gt;In this post, I&amp;rsquo;ll talk about how to strengthen your application so that you get an interview. In my next post, I&amp;rsquo;ll talk about how to nail the interview. Finally, I&amp;rsquo;ll discuss how to navigate choosing an internship post-offer. This series is based on my own experiences, which were heavily influenced by older students, and by 
 &lt;a href=&#34;http://www.crackingthecodinginterview.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cracking the Coding Interview&lt;/a&gt;. I&amp;rsquo;ll be referencing the book several times, and it&amp;rsquo;s very worth checking it out!&lt;/p&gt;
 &lt;p&gt;The first step to getting an interview is having a strong resume. There are two components to this - building the material that will go on your resume, and then actually writing the resume.&lt;/p&gt;

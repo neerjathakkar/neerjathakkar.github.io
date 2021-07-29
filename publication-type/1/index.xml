@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 | Neerja Thakkar</title>
+    <link>https://neerja.me/publication-type/1/</link>
+      <atom:link href="https://neerja.me/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>This work by Neerja Thakkar is licensed under a Creative Commons Attribution 4.0 International License.
+© Neerja Thakkar 2020</copyright><lastBuildDate>Tue, 20 Jul 2021 23:12:58 -0500</lastBuildDate>
+    <image>
+      <url>https://neerja.me/images/icon_hu709051646b5c016a474294f302c76519_2025058_512x512_fill_lanczos_center_2.png</url>
+      <title>1</title>
+      <link>https://neerja.me/publication-type/1/</link>
+    </image>
+    
+    <item>
+      <title>On the Feasibility of 3D Model-Based Forensic Height and Weight Estimation</title>
+      <link>https://neerja.me/publication/cvprw_2021/</link>
+      <pubDate>Tue, 20 Jul 2021 23:12:58 -0500</pubDate>
+      <guid>https://neerja.me/publication/cvprw_2021/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

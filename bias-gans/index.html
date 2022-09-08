@@ -1,0 +1,599 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bias in GANs</title>
+
+    <meta content="Studying Bias in GANs through the Lens of Race" property="og:title" />
+    <meta
+        content="We study how the performance and evaluation of generative image models are impacted by the racial composition of their training datasets."
+        name="description" property="og:description" />
+
+    <style type="text/css">
+        :root {
+            --small-thumb-border-radius: 2px;
+            --larger-thumb-border-radius: 3px;
+        }
+
+        html {
+            font-size: 14px;
+            line-height: 1.6;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        @media(min-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .base-grid,
+        .n-header,
+        .n-byline,
+        .n-title,
+        .n-article,
+        .n-footer {
+            display: grid;
+            justify-items: stretch;
+            grid-template-columns: [screen-start] 8px [page-start kicker-start text-start gutter-start middle-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [text-end page-end gutter-end kicker-end middle-end] 8px [screen-end];
+            grid-column-gap: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-column-gap: 8px;
+        }
+
+        @media(min-width: 768px) {
+
+            .base-grid,
+            .n-header,
+            .n-byline,
+            .n-title,
+            .n-article,
+            .n-footer {
+                display: grid;
+                justify-items: stretch;
+                grid-template-columns: [screen-start] 1fr [page-start kicker-start middle-start text-start] 45px 45px 45px 45px 45px 45px 45px 45px [ kicker-end text-end gutter-start] 45px [middle-end] 45px [page-end gutter-end] 1fr [screen-end];
+                grid-column-gap: 16px;
+            }
+
+            .grid {
+                grid-column-gap: 16px;
+            }
+        }
+
+        @media(min-width: 1000px) {
+
+            .base-grid,
+            .n-header,
+            .n-byline,
+            .n-title,
+            .n-article,
+            .n-footer {
+                display: grid;
+                justify-items: stretch;
+                grid-template-columns: [screen-start] 1fr [page-start kicker-start] 50px [middle-start] 50px [text-start kicker-end] 50px 50px 50px 50px 50px 50px 50px 50px [text-end gutter-start] 50px [middle-end] 50px [page-end gutter-end] 1fr [screen-end];
+                grid-column-gap: 16px;
+            }
+
+            .grid {
+                grid-column-gap: 16px;
+            }
+        }
+
+        @media (min-width: 1180px) {
+
+            .base-grid,
+            .n-header,
+            .n-byline,
+            .n-title,
+            .n-article,
+            .n-footer {
+                display: grid;
+                justify-items: stretch;
+                grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+                grid-column-gap: 32px;
+            }
+
+            .grid {
+                grid-column-gap: 32px;
+            }
+
+        }
+
+        .base-grid {
+            grid-column: screen;
+        }
+
+        /* default grid column assignments */
+        .n-title>* {
+            grid-column: text;
+        }
+
+        .n-article>* {
+            grid-column: text;
+        }
+
+        .n-header {
+            height: 0px;
+        }
+
+        .n-footer {
+            height: 60px;
+        }
+
+        .n-title {
+            padding: 4rem 0 1.5rem;
+        }
+
+        .l-page {
+            grid-column: page;
+        }
+
+        .l-article {
+            grid-column: text;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+
+        .pixelated {
+            image-rendering: pixelated;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        /*------------------------------------------------------------------*/
+        /* title */
+        .n-title h1 {
+            font-family: "Barlow", system-ui, Arial, sans-serif;
+            color: #082333;
+            grid-column: text;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.1em;
+            margin: 0 0 0.5rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .n-title h1 {
+                font-size: 50px;
+            }
+        }
+
+        /*------------------------------------------------------------------*/
+        /* article */
+        .n-article {
+            color: rgb(33, 40, 53);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 2rem;
+        }
+
+        .n-article h2 {
+            contain: layout style;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.25em;
+            margin: 2rem 0 1.5rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .n-article {
+                line-height: 1.7;
+            }
+
+            .n-article h2 {
+                font-size: 36px;
+            }
+        }
+
+        /*------------------------------------------------------------------*/
+        /* byline */
+
+        .n-byline {
+            contain: style;
+            overflow: hidden;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: 0.8rem;
+            line-height: 1.8em;
+            padding: 1.5rem 0;
+            min-height: 1.8em;
+        }
+
+        .n-byline .byline {
+            grid-column: text;
+        }
+
+        .byline {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .grid {
+            display: grid;
+            grid-column-gap: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-column-gap: 16px;
+            }
+        }
+
+        .n-byline p {
+            margin: 0;
+        }
+
+        .n-byline h3 {
+            font-size: 0.6rem;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.5);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .n-byline .authors-affiliations {
+            grid-column-end: span 2;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /*------------------------------------------------------------------*/
+        /* figures */
+        .figure {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        figcaption,
+        .figcaption {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 12px;
+            line-height: 1.5em;
+        }
+
+        ul.authors {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        ul.authors li {
+            padding: 0 0.5rem;
+            display: inline-block;
+        }
+
+        ul.authors sup {
+            color: rgb(126, 126, 126);
+        }
+
+        ul.authors.affiliations {
+            margin-top: 0.5rem;
+        }
+
+        ul.authors.affiliations li {
+            color: rgb(126, 126, 126);
+        }
+
+        /* Download section columns.  This switches between two layouts::after
+
+- two columns on larger viewport sizes: side-by-side paper thumb and links
+- single column: no thumb
+ */
+        .download-section {
+            display: grid;
+            grid-template-areas: "links";
+        }
+
+        .download-section h4 {
+            margin-left: 2.5rem;
+            display: block;
+        }
+
+        .download-thumb {
+            grid-area: thumb;
+            display: none;
+        }
+
+        .download-links {
+            grid-area: links;
+        }
+
+        img.dropshadow {
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @media(min-width: 1180px) {
+            .download-section {
+                display: grid;
+                grid-template-areas: "thumb links";
+            }
+
+            .download-thumb {
+                display: block;
+            }
+        }
+
+        /* For BibTeX */
+        pre {
+            font-size: 0.9em;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-radius: 3px;
+            background-color: rgb(235, 235, 235);
+            overflow-x: auto;
+        }
+
+        /* video caption */
+
+        .video {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .videocaption {
+            display: flex;
+            font-size: 16px;
+            line-height: 1.5em;
+            margin-bottom: 4rem;
+            justify-content: center;
+        }
+
+        .disable-selection {
+            user-select: none;
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer */
+            -khtml-user-select: none;
+            /* KHTML browsers (e.g. Konqueror) */
+            -webkit-user-select: none;
+            /* Chrome, Safari, and Opera */
+            -webkit-touch-callout: none;
+            /* Disable Android and iOS callouts*/
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        h3.figtitle {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .fig-title-line {
+            grid-template-columns: 2fr 0.75fr;
+        }
+
+        .fig-thumb-image-row {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        .fig-thumb-image-row-item {
+            width: 100%;
+            min-height: auto;
+            border-radius: var(--small-thumb-border-radius);
+        }
+
+        .fig-dataset-button {
+            border-color: rgba(0, 0, 0, 0);
+            border-width: 1px;
+            border-style: solid;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .fig-dataset-button.active {
+            border-color: rgba(0, 0, 0, 0.7);
+            border-width: 1px;
+            border-style: solid;
+            opacity: 1.0;
+        }
+
+        .grid {
+            display: grid;
+            grid-column-gap: 8px;
+        }
+
+        .fig-3-image-row {
+            margin-top: 1em;
+            grid-template-columns: 1fr 1.3fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        .fig-3-image-item {
+            justify-self: center;
+            align-self: center;
+            width: 100%;
+            border-radius: var(--larger-thumb-border-radius);
+        }
+
+        /*---------------------------------------------------------------------*/
+        .fig-slider {
+            grid-template-columns: auto 2fr;
+            grid-template-rows: 1fr;
+            margin-top: 1em;
+            align-items: start;
+            justify-content: center;
+        }
+
+        .fig-slider img.play_button {
+            margin-right: 8px;
+            cursor: pointer;
+            justify-self: center;
+        }
+
+        .fig-slider svg {
+            touch-action: none;
+        }
+
+        .fig-preload {
+            display: none;
+        }
+
+        /*---------------------------------------------------------------------*/
+
+        video {
+            height: calc(100% + 80px);
+        }
+
+        .l-page {
+            margin-top: -40px;
+            padding-bottom: 120px;
+        }
+
+        .previd {
+            margin-bottom: -30px;
+        }
+
+        .postvid {
+            margin-top: 50px;
+        }
+
+        .teaser {
+            float: left;
+            width: 50%;
+        }
+
+        /*---------------------------------------------------------------------*/
+    </style>
+    <!-- inline stylesheet files into the above <style> element -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Segoe+UI" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="n-header">
+    </div>
+    <div class="n-title">
+        <h1>
+            Studying Bias in GANs through the Lens of Race
+        </h1>
+    </div>
+    <div class="n-byline">
+        <div class="byline">
+            <ul class="authors">
+                <li>
+                    Vongani H. Maluleke*
+                </li>
+                <li>
+                    Neerja Thakkar*
+                </li>
+                <li>
+                    Tim Brooks
+                </li>
+                <li>
+                    Ethan Weber
+                </li>
+                <li>
+                    Trevor Darrell
+                </li>
+                <li>
+                    Alexei A. Efros
+                </li>
+                <li>
+                    Angjoo Kanazawa
+                </li>
+                <li>
+                    Devin Guillory
+                </li>
+            </ul>
+            <ul class="authors affiliations">
+                <li>
+                    UC Berkeley
+                </li>
+            </ul>
+            <ul class="authors affiliations">
+                <li>
+                    ECCV 2022
+                </li>
+            </ul>
+            <ul class="authors">
+                <li style="text-align: left; width: 90%;">
+                    * Equal contribution in alphabetical order.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="n-article">
+        <div class="l-article">
+            <img src="teaser.png" width="100%">
+        </div>
+        <h2 id="abstract">
+            Abstract
+        </h2>
+        <p>
+            In this work, we study how the performance and evaluation of generative image models are impacted by the
+            racial composition of their training datasets. By examining and controlling the racial distributions in
+            various training datasets, we are able to observe the impacts of different training distributions on
+            generated image quality and the racial distributions of the generated images. Our results show that the
+            racial compositions of generated images successfully preserve that of the training data. However, we observe
+            that truncation, a technique used to generate higher quality images during inference, exacerbates racial
+            imbalances in the data. Lastly, when examining the relationship between image quality and race, we find that
+            the highest perceived visual quality images of a given race come from a distribution where that race is
+            well-represented, and that annotators consistently prefer generated images of white people over those of
+            Black people.
+        </p>
+        <h2 id="links">
+            Links
+        </h2>
+        <div class="grid download-section">
+            <div class="download-thumb">
+                <a href="https://arxiv.org/abs/2209.02836" target="_blank">
+                    <img class="dropshadow" src="paper_image.png" width=300 />
+                </a>
+            </div>
+            <div class="download-links">
+                <ul>
+                    <li>
+                        <a href="https://arxiv.org/abs/2209.02836" target="_blank">
+                            arXiv
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ethanweber/anno" target="_blank">
+                            MTurk annotations code
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="acknowledgments">
+            Acknowledgments
+        </h2>
+        <p>
+            We thank Hany Farid, Judy Hoffman, Aaron Hertzmann, Bryan Russell, and Deborah Raji for useful discussions
+            and feedback. This work was supported by the BAIR/BDD sponsors, ONR MURI N00014-21-1-2801, and NSF Graduate
+            Fellowships. The study of annotator bias was performed under IRB Protocol ID 2022-04-15236.
+        </p>
+        <p>
+            Project webpage based on <a href="https://nvlabs.github.io/stylegan3/" target="_blank">StyleGAN3</a>.
+        </p>
+    </div>
+    <div class="n-footer">
+    </div>
+</body>
+
+</html>

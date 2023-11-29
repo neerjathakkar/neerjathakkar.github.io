@@ -1,0 +1,642 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bias in GANs</title>
+
+    <meta content="Adaptive Human Trajectory Prediction via Latent Corridors" property="og:title" />
+    <meta
+        content="We formulate the problem of scene-specific adaptive trajectory prediction and propose a new adaptation approach inspired by prompt tuning called latent corridors."
+        name="description" property="og:description" />
+
+    <style type="text/css">
+        :root {
+            --small-thumb-border-radius: 2px;
+            --larger-thumb-border-radius: 3px;
+        }
+
+        html {
+            font-size: 14px;
+            line-height: 1.6;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        @media(min-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .base-grid,
+        .n-header,
+        .n-byline,
+        .n-title,
+        .n-article,
+        .n-footer {
+            display: grid;
+            justify-items: stretch;
+            grid-template-columns: [screen-start] 8px [page-start kicker-start text-start gutter-start middle-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [text-end page-end gutter-end kicker-end middle-end] 8px [screen-end];
+            grid-column-gap: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-column-gap: 8px;
+        }
+
+        @media(min-width: 768px) {
+
+            .base-grid,
+            .n-header,
+            .n-byline,
+            .n-title,
+            .n-article,
+            .n-footer {
+                display: grid;
+                justify-items: stretch;
+                grid-template-columns: [screen-start] 1fr [page-start kicker-start middle-start text-start] 45px 45px 45px 45px 45px 45px 45px 45px [ kicker-end text-end gutter-start] 45px [middle-end] 45px [page-end gutter-end] 1fr [screen-end];
+                grid-column-gap: 16px;
+            }
+
+            .grid {
+                grid-column-gap: 16px;
+            }
+        }
+
+        @media(min-width: 1000px) {
+
+            .base-grid,
+            .n-header,
+            .n-byline,
+            .n-title,
+            .n-article,
+            .n-footer {
+                display: grid;
+                justify-items: stretch;
+                grid-template-columns: [screen-start] 1fr [page-start kicker-start] 50px [middle-start] 50px [text-start kicker-end] 50px 50px 50px 50px 50px 50px 50px 50px [text-end gutter-start] 50px [middle-end] 50px [page-end gutter-end] 1fr [screen-end];
+                grid-column-gap: 16px;
+            }
+
+            .grid {
+                grid-column-gap: 16px;
+            }
+        }
+
+        @media (min-width: 1180px) {
+
+            .base-grid,
+            .n-header,
+            .n-byline,
+            .n-title,
+            .n-article,
+            .n-footer {
+                display: grid;
+                justify-items: stretch;
+                grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+                grid-column-gap: 32px;
+            }
+
+            .grid {
+                grid-column-gap: 32px;
+            }
+
+        }
+
+        .base-grid {
+            grid-column: screen;
+        }
+
+        /* default grid column assignments */
+        .n-title>* {
+            grid-column: text;
+        }
+
+        .n-article>* {
+            grid-column: text;
+        }
+
+        .n-header {
+            height: 0px;
+        }
+
+        .n-footer {
+            height: 60px;
+        }
+
+        .n-title {
+            padding: 4rem 0 1.5rem;
+        }
+
+        .l-page {
+            grid-column: page;
+        }
+
+        .l-article {
+            grid-column: text;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+
+        .pixelated {
+            image-rendering: pixelated;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        /*------------------------------------------------------------------*/
+        /* title */
+        .n-title h1 {
+            font-family: "Barlow", system-ui, Arial, sans-serif;
+            color: #082333;
+            grid-column: text;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.1em;
+            margin: 0 0 0.5rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .n-title h1 {
+                font-size: 50px;
+            }
+        }
+
+        /*------------------------------------------------------------------*/
+        /* article */
+        .n-article {
+            color: rgb(33, 40, 53);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 2rem;
+        }
+
+        .n-article h2 {
+            contain: layout style;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.25em;
+            margin: 2rem 0 1.5rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .n-article {
+                line-height: 1.7;
+            }
+
+            .n-article h2 {
+                font-size: 36px;
+            }
+        }
+
+        /*------------------------------------------------------------------*/
+        /* byline */
+
+        .n-byline {
+            contain: style;
+            overflow: hidden;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: 0.8rem;
+            line-height: 1.8em;
+            padding: 1.5rem 0;
+            min-height: 1.8em;
+        }
+
+        .n-byline .byline {
+            grid-column: text;
+        }
+
+        .byline {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .grid {
+            display: grid;
+            grid-column-gap: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-column-gap: 16px;
+            }
+        }
+
+        .n-byline p {
+            margin: 0;
+        }
+
+        .n-byline h3 {
+            font-size: 0.6rem;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.5);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .n-byline .authors-affiliations {
+            grid-column-end: span 2;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /*------------------------------------------------------------------*/
+        /* figures */
+        .figure {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        figcaption,
+        .figcaption {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 12px;
+            line-height: 1.5em;
+        }
+
+        ul.authors {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        ul.authors li {
+            padding: 0 0.5rem;
+            display: inline-block;
+        }
+
+        ul.authors sup {
+            color: rgb(126, 126, 126);
+        }
+
+        ul.authors.affiliations {
+            margin-top: 0.5rem;
+        }
+
+        ul.authors.affiliations li {
+            color: rgb(126, 126, 126);
+        }
+
+        /* Download section columns.  This switches between two layouts::after
+
+- two columns on larger viewport sizes: side-by-side paper thumb and links
+- single column: no thumb
+ */
+        .download-section {
+            display: grid;
+            grid-template-areas: "links";
+        }
+
+        .download-section h4 {
+            margin-left: 2.5rem;
+            display: block;
+        }
+
+        .download-thumb {
+            grid-area: thumb;
+            display: none;
+        }
+
+        .download-links {
+            grid-area: links;
+        }
+
+        img.dropshadow {
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @media(min-width: 1180px) {
+            .download-section {
+                display: grid;
+                grid-template-areas: "thumb links";
+            }
+
+            .download-thumb {
+                display: block;
+            }
+        }
+
+        /* For BibTeX */
+        pre {
+            font-size: 0.9em;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-radius: 3px;
+            background-color: rgb(235, 235, 235);
+            overflow-x: auto;
+        }
+
+        /* video caption */
+
+        .video {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .videocaption {
+            display: flex;
+            font-size: 16px;
+            line-height: 1.5em;
+            margin-bottom: 4rem;
+            justify-content: center;
+        }
+
+        .disable-selection {
+            user-select: none;
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer */
+            -khtml-user-select: none;
+            /* KHTML browsers (e.g. Konqueror) */
+            -webkit-user-select: none;
+            /* Chrome, Safari, and Opera */
+            -webkit-touch-callout: none;
+            /* Disable Android and iOS callouts*/
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        h3.figtitle {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .fig-title-line {
+            grid-template-columns: 2fr 0.75fr;
+        }
+
+        .fig-thumb-image-row {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        .fig-thumb-image-row-item {
+            width: 100%;
+            min-height: auto;
+            border-radius: var(--small-thumb-border-radius);
+        }
+
+        .fig-dataset-button {
+            border-color: rgba(0, 0, 0, 0);
+            border-width: 1px;
+            border-style: solid;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .fig-dataset-button.active {
+            border-color: rgba(0, 0, 0, 0.7);
+            border-width: 1px;
+            border-style: solid;
+            opacity: 1.0;
+        }
+
+        .grid {
+            display: grid;
+            grid-column-gap: 8px;
+        }
+
+        .fig-3-image-row {
+            margin-top: 1em;
+            grid-template-columns: 1fr 1.3fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        .fig-3-image-item {
+            justify-self: center;
+            align-self: center;
+            width: 100%;
+            border-radius: var(--larger-thumb-border-radius);
+        }
+
+        /*---------------------------------------------------------------------*/
+        .fig-slider {
+            grid-template-columns: auto 2fr;
+            grid-template-rows: 1fr;
+            margin-top: 1em;
+            align-items: start;
+            justify-content: center;
+        }
+
+        .fig-slider img.play_button {
+            margin-right: 8px;
+            cursor: pointer;
+            justify-self: center;
+        }
+
+        .fig-slider svg {
+            touch-action: none;
+        }
+
+        .fig-preload {
+            display: none;
+        }
+
+        /*---------------------------------------------------------------------*/
+
+        video {
+            height: calc(100% + 80px);
+        }
+
+        .l-page {
+            margin-top: -40px;
+            padding-bottom: 120px;
+        }
+
+        .previd {
+            margin-bottom: -30px;
+        }
+
+        .postvid {
+            margin-top: 50px;
+        }
+
+        .teaser {
+            float: left;
+            width: 50%;
+        }
+
+        /*---------------------------------------------------------------------*/
+    </style>
+    <!-- inline stylesheet files into the above <style> element -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Segoe+UI" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="n-header">
+    </div>
+    <div class="n-title">
+        <h1>
+            Adaptive Human Trajectory Prediction via Latent Corridors
+        </h1>
+    </div>
+    <div class="n-byline">
+        <div class="byline">
+            <ul class="authors">
+                <li>
+                    Neerja Thakkar
+                    <sup>
+				       1
+				    </sup>
+                </li>
+                <li>
+                    Karttikeya Mangalam
+                    <sup>
+				       1
+				    </sup>
+                </li>
+                <li>
+                    Andrea Bajcsy
+                    <sup>
+				       2
+				    </sup>
+                </li>
+                <li>
+                    Jitendra Malik
+                    <sup>
+				       1
+				    </sup>
+                </li>
+  
+            </ul>
+            <ul class="authors affiliations">
+                <li>
+                	<sup>
+				       1
+				    </sup>
+                    UC Berkeley
+                </li>
+                    <li>
+                	<sup>
+				       2
+				    </sup>
+                    Carnegie Mellon University
+                </li>
+            </ul>
+            <!-- <ul class="authors affiliations">
+                <li>
+                    ECCV 2022
+                </li>
+            </ul> -->
+           <!--  <ul class="authors">
+                <li style="text-align: left; width: 90%;">
+                    * Equal contribution in alphabetical order.
+                </li>
+            </ul> -->
+        </div>
+    </div>
+    <div class="n-article">
+        <div class="l-article" style="text-align:center;" >
+            <img src="teaser.jpg" width="100%">
+        </div>
+        <div class="caption">
+         <div>
+          <strong>
+           Adaptive trajectory prediction.
+          </strong>
+          (left) Given a history of human behavior (shown in black), the pre-trained predictor  is unable to understand scene-specific behavior trends, like people entering a subterranean subway entrance (bottom row). (right) When adapting, the number of people and amount of time determine the total number of trajectories observed, and we denote this time-dependent quantity human-seconds. Here, the three columns correspond to our method trained for a very small (left), medium (middle), and large amount of human-seconds. Our adaptive <em> latent corridors </em> approach enables the predictor to quickly learn scene-specific trends, improving predictions with even small amounts of data, and closing the gap between the ground-truth (green) and predicted behavior (orange). For example, in the middle row, we see that the base predictor predicts the person will move towards the camera, but as our adaptive predictor sees more human-seconds of data, it adapts to the trend that people in this plaza scene tend to avoid the center of the plaza and instead move diagonally across it. 
+         </div>
+        </div>
+        <h2 id="abstract">
+            Abstract
+        </h2>
+        <p>
+            Human trajectory prediction is typically posed as a zero-shot generalization problem: a predictor is learnt on a dataset of human motion in training scenes, and then deployed on unseen test scenes. While this paradigm has yielded tremendous progress, it fundamentally assumes that trends in human behavior within the deployment scene are constant over time. As such, current prediction models are unable to adapt to scene-specific transient human behaviors, such as crowds temporarily gathering to see buskers, pedestrians hurrying through the rain and avoiding puddles, or a protest breaking out. We formalize the problem of scene-specific adaptive trajectory prediction (ATP) and propose a new  adaptation approach inspired by prompt tuning called latent corridors. By augmenting the input of any pre-trained human trajectory predictor with learnable image prompts, the predictor can improve in the deployment scene by inferring trends from extremely small amounts of new data (e.g., 2 humans observed for 30 seconds).  With less than 0.1% additional model parameters, we see up to 23.9% ADE improvement in MOTSynth simulated data and 16.4% ADE in MOT and Wildtrack real pedestrian data. Qualitatively, we observe that latent corridors imbue predictors with an awareness of scene geometry and scene-specific human behaviors that non-adaptive predictors struggle to capture. 
+        </p>
+        <h2 id="links">
+            Results
+        </h2>
+           <p>
+    The below video shows results of our latent corridors approach to adaptive trajectory prediction on synthetic MOTSynth data and real MOT and webcam data.
+
+       </p>
+
+       <div class="l-page video" style="text-align:center;">
+        <video controls="" loop="" width="70%">
+         <source src=results.mp4 type="video/mp4"/>
+        </video>
+        <!-- <div class="videocaption">
+         <div>
+          <strong>
+           Video 8:
+          </strong>
+          Internal activations
+         </div>
+        </div> -->
+       </div>
+
+        <h2 id="links">
+            Links
+        </h2>
+        <div class="grid download-section">
+            <div class="download-thumb">
+                <a href="https://arxiv.org/" target="_blank">
+                    <img class="dropshadow" src="paper_image.jpg" width=300 />
+                </a>
+            </div>
+            <div class="download-links">
+                <ul>
+                    <li>
+                        <a href="https://arxiv.org/" target="_blank">
+                            arXiv
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/ethanweber/anno" target="_blank">
+                            MTurk annotations code
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <!--    <h2 id="citation">
+            Citation
+           </h2>
+           <pre><code>@inproceedings{maluleke2022studying,
+    author = {Maluleke, Vongani H and Thakkar, Neerja and Brooks, Tim and Weber, Ethan and Darrell, Trevor and Efros, Alexei A and Kanazawa, Angjoo and Guillory, Devin},
+    title = {Studying Bias in GANs through the Lens of Race},
+    booktitle = {European Conference on Computer Vision (ECCV)},
+    year = {2022}
+}</code></pre>
+ -->
+        <h2 id="acknowledgments">
+            Acknowledgments
+        </h2>
+       <!--  <p>
+            We thank Hany Farid, Judy Hoffman, Aaron Hertzmann, Bryan Russell, and Deborah Raji for useful discussions
+            and feedback. This work was supported by the BAIR/BDD sponsors, ONR MURI N00014-21-1-2801, and NSF Graduate
+            Fellowships. The study of annotator bias was performed under IRB Protocol ID 2022-04-15236.
+        </p>
+        <p> -->
+        
+        <!-- </p> -->
+        <p>
+            Project webpage based on <a href="https://nvlabs.github.io/stylegan3/" target="_blank">StyleGAN3</a>.
+        </p>
+    </div>
+    <div class="n-footer">
+    </div>
+</body>
+
+</html>

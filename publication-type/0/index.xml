@@ -6,12 +6,20 @@
       <atom:link href="https://neerja.me/publication-type/0/index.xml" rel="self" type="application/rss+xml" />
     <description>0</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>This work by Neerja Thakkar is licensed under a Creative Commons Attribution 4.0 International License.
-© Neerja Thakkar 2020</copyright><lastBuildDate>Sun, 24 May 2020 13:28:44 -0500</lastBuildDate>
+© Neerja Thakkar 2020</copyright><lastBuildDate>Mon, 11 Dec 2023 11:12:19 -0800</lastBuildDate>
     <image>
       <url>https://neerja.me/images/icon_hu709051646b5c016a474294f302c76519_2025058_512x512_fill_lanczos_center_2.png</url>
       <title>0</title>
       <link>https://neerja.me/publication-type/0/</link>
     </image>
+    
+    <item>
+      <title>Adaptive Human Trajectory Prediction via Latent Corridors</title>
+      <link>https://neerja.me/publication/atp_via_latent_corridors/</link>
+      <pubDate>Mon, 11 Dec 2023 11:12:19 -0800</pubDate>
+      <guid>https://neerja.me/publication/atp_via_latent_corridors/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Deep Compressed Sensing for HDR Image Acquisition</title>

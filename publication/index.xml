@@ -6,12 +6,20 @@
       <atom:link href="https://neerja.me/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Research</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>This work by Neerja Thakkar is licensed under a Creative Commons Attribution 4.0 International License.
-© Neerja Thakkar 2020</copyright><lastBuildDate>Mon, 11 Dec 2023 11:12:19 -0800</lastBuildDate>
+© Neerja Thakkar 2020</copyright><lastBuildDate>Wed, 11 Dec 2024 11:12:19 -0800</lastBuildDate>
     <image>
       <url>https://neerja.me/images/icon_hu709051646b5c016a474294f302c76519_2025058_512x512_fill_lanczos_center_2.png</url>
       <title>Research</title>
       <link>https://neerja.me/publication/</link>
     </image>
+    
+    <item>
+      <title>Poly-Autoregressive Prediction for Modeling Interactions</title>
+      <link>https://neerja.me/publication/par/</link>
+      <pubDate>Wed, 11 Dec 2024 11:12:19 -0800</pubDate>
+      <guid>https://neerja.me/publication/par/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Adaptive Human Trajectory Prediction via Latent Corridors</title>

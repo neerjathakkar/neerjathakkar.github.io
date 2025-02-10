@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Poly-Autoregressive Prediction for Modeling Interactions">
+  <meta name="keywords" content="PAR">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poly-Autoregressive Prediction for Modeling Interactions</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Poly-Autoregressive Prediction for Modeling Interactions</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://neerja.me/">Neerja Thakkar</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://dblp.org/pid/252/5099.html">Tara Sadjadpour</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://people.eecs.berkeley.edu/~jathushan/LART/">Jathushan Rajasegeran</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://shiry.ttic.edu/">Shiry Ginosar</a><sup>2,3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a><sup>1</sup>
+              </span>
+             
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>UC Berkeley,</span>
+              <span class="author-block"><sup>2</sup>Google DeepMind,</span>
+              <span class="author-block"><sup>3</sup>TTIC</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href=""
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-video" style="padding-bottom: 55%">
+              <video id="teaser" autoplay controls muted loop playsinline height="100%">
+                <source src="./PAR_video_proj_page.m4v" type="video/mp4">
+              </video>
+            </div>
+            <p>
+            Video results using our PAR framework.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We introduce a simple framework for predicting the behavior of an ego agent in multi-agent settings. In contrast to autoregressive (AR) tasks, such as language processing, our focus is on scenarios with multiple agents whose interactions are shaped by physical constraints and internal motivations. To this end, we propose Poly-Autoregressive (PAR) modeling, which forecasts an ego agent’s future behavior by reasoning about the ego agent’s state history and the current state of other interacting agents. At its core, PAR represents the behavior of all agents as a sequence of tokens, each representing an agent’s state at a specific timestep. With minimal data pre-processing changes, we show that PAR can be applied to three different problems: human action prediction in social situations, trajectory prediction for autonomous vehicles, and object pose prediction during hand-object interaction. Using a small proof-of-concept transformer backbone, PAR outperforms AR across our three scenarios.
+            </p>
+          </div>
+        </div>
+      </div>
+
+ <!--      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Results</h2>
+          <div class="publication-video" style="padding-bottom: 55%">
+              <video id="teaser" autoplay controls muted loop playsinline height="100%">
+                <source src="./PAR_video_proj_page.m4v" type="video/mp4">
+              </video>
+            </div>
+        </div>
+      </div>
+    </div>
+ -->
+     
+
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">The PAR Framework</h2>
+           <p>
+           Our Poly-Autoregressive Framework disentangles task-specific modeling requirements from multi-agent behavior prediction.
+          </p>
+          <img src="./static/images/par_method.png"
+                 class="interpolation-image"
+                 alt="PAR_framework"/>
+
+          <p>
+            We begin by collecting a video dataset, such as AVA (top) or DexYCB (bottom), though ourframework can handle any video data. Then, using dataset labels or computer vision techniques, a trajectory with the appropriate modality for our prediction task is extracted for each agent, such as action class labels (top) or object pose and 3D hand translation (bottom). Data is then tokenized, either through discretization or directly using continuous values, with our framework supporting both formats. Based on the tokenization and prediction task, we choose the appropriate loss function for PAR training. After training with PAR, predicted tokens can be decoded back to data space and evaluated with relevant metrics.
+          </p>
+          </div>
+        </div>
+      </div>
+
+        <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Poly-Autoregressive Modeling</h2>
+           <h3 class="title is-4">Inference</h3>
+          <img src="./static/images/inference.png"
+                 class="interpolation-image"
+                 alt="PAR inference"/>
+
+          <p>
+            Inference for (autoregressive (AR) models and (b) our proposed poly-autoregressive (PAR) model. Solid indicates ground-truth tokens which represent a data modality such as action or 6DOF pose; striped represents predicted output tokens. Colors denotes agent identity. Compared to AR models, the PAR model takes other agents’ tokens as inputs when making a prediction for the next timestep.
+          </p>
+          <h3 class="title is-4">Training</h3>
+          <img src="./static/images/training.png"
+                 class="interpolation-image"
+                 alt="PAR training."/>
+
+          <p>
+            Training with teacher forcing for multi-agent next-token prediction in autoregressive models and multi-agent poly-autoregressive models. Solid indicates a ground-truth token and striped predicted. Color denotes agent identity. The AR model is trained for next-token prediction, while the PAR model is trained to predict the next timestep of the same agent.          
+          </p>
+          </div>
+        </div>
+      </div>
+
+
+
+  <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <pre><code>@article{thakkar2025polyautoregressive,
+  author    = {Thakkar, Neerja and Sadjadpour, Tara, and Rajasegeran, Jathushan, and Ginosar, Shiry, and Malik, Jitendra},
+  title     = {Poly-Autoregressive Prediction for Modeling Interactions},
+  journal   = {arxiv},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://arxiv.org/">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+                International License</a>.
+            </p>
+            <p>
+              This means you are free to borrow the <a href="">source
+                code</a> of this website, which itelf is a fork of <a
+                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. We just ask that you link back to this
+              page in the footer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

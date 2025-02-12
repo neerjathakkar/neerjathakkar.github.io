@@ -55,8 +55,8 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>UC Berkeley,</span>
-              <span class="author-block"><sup>2</sup>Google DeepMind,</span>
-              <span class="author-block"><sup>3</sup>TTIC</span>
+              <span class="author-block"><sup>2</sup>Toyota Technical Institute at Chicago,</span>
+              <span class="author-block"><sup>3</sup>Google DeepMind</span>
             </div>
 
             <div class="column has-text-centered">
@@ -95,6 +95,20 @@
       </div>
     </div>
   </section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+       <!-- <div class="content has-text-justified"> -->
+        We introduce a simple framework for predicting agent behavior in multi-agent settings, unifying social human action forecasting, car trajectory prediction, and hand-object interaction forecasting. 
+      </h2>
+    </div>
+  </div>
+</section>
+
+  
+
 
   <section class="hero teaser">
     <div class="container is-max-desktop">
@@ -140,13 +154,15 @@
       </div>
     </div>
  -->
-     
+     &nbsp;
+
 
     <div class="container is-max-desktop">
 
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">The PAR Framework</h2>
+          <div class="content has-text-justified">
            <p>
            Our Poly-Autoregressive Framework disentangles task-specific modeling requirements from multi-agent behavior prediction.
           </p>
@@ -155,16 +171,23 @@
                  alt="PAR_framework"/>
 
           <p>
-            We begin by collecting a video dataset, such as AVA (top) or DexYCB (bottom), though ourframework can handle any video data. Then, using dataset labels or computer vision techniques, a trajectory with the appropriate modality for our prediction task is extracted for each agent, such as action class labels (top) or object pose and 3D hand translation (bottom). Data is then tokenized, either through discretization or directly using continuous values, with our framework supporting both formats. Based on the tokenization and prediction task, we choose the appropriate loss function for PAR training. After training with PAR, predicted tokens can be decoded back to data space and evaluated with relevant metrics.
+            We begin by collecting a video dataset, such as AVA (top) or DexYCB (bottom). Then, using dataset labels or computer vision techniques, a trajectory with the appropriate modality for our prediction task is extracted for each agent, such as action class labels (top) or object pose and 3D hand translation (bottom). Data is then tokenized, either through discretization or directly using continuous values, with our framework supporting both formats. Based on the tokenization and prediction task, we choose the appropriate loss function for PAR training. After training with PAR, predicted tokens can be decoded back to data space and evaluated with relevant metrics.
           </p>
           </div>
         </div>
       </div>
+       </div>
+
+       &nbsp;
+       &nbsp;
+
 
         <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Poly-Autoregressive Modeling</h2>
            <h3 class="title is-4">Inference</h3>
+          <div class="content has-text-justified">
+
           <img src="./static/images/inference.png"
                  class="interpolation-image"
                  alt="PAR inference"/>
@@ -172,7 +195,10 @@
           <p>
             Inference for (autoregressive (AR) models and (b) our proposed poly-autoregressive (PAR) model. Solid indicates ground-truth tokens which represent a data modality such as action or 6DOF pose; striped represents predicted output tokens. Colors denotes agent identity. Compared to AR models, the PAR model takes other agents’ tokens as inputs when making a prediction for the next timestep.
           </p>
+          </div>
           <h3 class="title is-4">Training</h3>
+                    <div class="content has-text-justified">
+
           <img src="./static/images/training.png"
                  class="interpolation-image"
                  alt="PAR training."/>
@@ -183,6 +209,7 @@
           </div>
         </div>
       </div>
+       </div>
 
 
 
